@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>gk-os</groupId>
-    <artifactId>file</artifactId>
+    <groupId>io.gotan.os</groupId>
+    <artifactId>file-utils</artifactId>
     <version>2.0.0-SNAPSHOT</version>
 
     <properties>
@@ -20,6 +20,13 @@
             <version>2.24.3</version>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>gotan</id>
+            <name>GotanDev Apache Maven Packages</name>
+            <url>https://repository.dev.gotan.io/repository/gotan.os/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
@@ -37,4 +44,25 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>gotan</id>
+            <distributionManagement>
+                <repository>
+                    <id>gotan</id>
+                    <url>https://repository.dev.gotan.io/repository/gotan.os/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>github</id>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/GotanDev/gk-file-utils</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>

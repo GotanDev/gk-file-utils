@@ -16,8 +16,8 @@ Language: Java
 
 ```
 <dependency>
-    <groupId>gk.os</groupId>
-    <artifactId>files</artifactId>
+    <groupId>io.gotan.os</groupId>
+    <artifactId>file-utils</artifactId>
     <version>2.0.0</version>
 </dependency>
 ```
